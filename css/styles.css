@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(220.55deg, #5D85A6 0%, #0E2C5E 100%); */
+}
+
+/* estilos header */
+
+header{
+    background: whitesmoke;
+
+}
+
+#logo{
+    margin: 2%;
+}
+
+nav{
+    float: right;
+    margin: 5%;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul li a:link, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover{
+    color: rgba(34, 75, 187, 0.932);
+}
+
+
+/* estilos main */
+
+#portada{
+    margin: 5%;
+}
+
+h1{
+    text-align: center;
+}
+
+
+form{
+    margin: 10%;
+}
+
+/* estilos footer */
+
+#redes{
+    float: right;
+    margin: 2%;
+}
+
+#copy{
+    float: left;
+    margin: 2%;
+}
