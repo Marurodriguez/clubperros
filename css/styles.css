@@ -7,6 +7,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #062164f5;
+
 }
 
 
@@ -52,6 +53,7 @@ nav ul li a{
 
 nav ul li a:hover{
     color: #046ba8;
+    cursor: pointer;
 }
 
 ul li ul {
@@ -82,8 +84,36 @@ ul li:hover ul{
 
 .perrito{
     position: fixed;
+    bottom: -5.7em;
+    left: -4.1em;
+    z-index: 2;
+}
+
+.perrito2{
+    position: fixed;
+    bottom: -7em;
+    left: 1em;
+    z-index: 2;
+}
+
+.perrito3{
+    position: fixed;
+    bottom: -5.7em;
+    left: -1em;
+    z-index: 2;
+}
+
+.perrito4{
+    position: fixed;
+    bottom: -0.5em;
+    left: -12em;
+    z-index: 2;
+}
+
+.perrito5{
+    position: fixed;
     bottom: -7.1em;
-    left: 1.5em;
+    left: 0em;
     z-index: 2;
 }
 
@@ -127,7 +157,7 @@ main{
 }
 
 .circulos__circulo1:hover, .circulos__circulo2:hover, .circulos__circulo3:hover{
-    background: #bebc3f;
+    background: #fdf905;
 }
 
 .circulos p{
@@ -151,12 +181,34 @@ main{
 }
 
 
-/* contacto */
+/* estilos page contacto */
 
 form{
     margin: 10%;
     color: white;
     text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 1em;
+}
+
+#submit{
+    padding: 0.5em;
+    margin: 1em;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+textarea{
+    font-family: 'Poppins', sans-serif;
+    padding: 1em;
+}
+
+#nombre, #email, #contacto{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0.5em;
 }
 
 /* estilos footer */
