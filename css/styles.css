@@ -225,17 +225,17 @@ a{
 }
 
 .paseos__img{
-    background-image: url("../images/paseos.jpg");
+    background-image: url("https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
 }
 
 .pensionados__img{
-    background-image: url("../images/pensionados.jpg");
+    background-image: url("https://cdn.redcanina.es/wp-content/uploads/2019/01/16213607/perro-durmiendo-mucho-750x375.jpg");
     background-position: right;
 }
 
 
 .traslados__img{
-    background-image: url("../images/traslados.jpg");
+    background-image: url("https://st.depositphotos.com/1146092/5090/i/600/depositphotos_50901051-stock-photo-dog-window-car.jpg");
     background-position: right;
 }
 
@@ -304,7 +304,7 @@ a{
     row-gap: 3em;
     column-gap: 3em;
     height: 40em;
-    color: lightgray;
+    color: white;
 }
 
 #contacto__form{
@@ -317,6 +317,11 @@ a{
 #contacto__redes{
     grid-area: redes;
     margin: 4em 0 0 5em;
+    
+}
+
+#contacto__redes a{
+    color: lightgray;
 }
 
 #contacto__redes__ig{
@@ -327,7 +332,6 @@ a{
 #contacto__map{
     grid-area: map;
     margin:5em;
-    color: white;
 }
 
 
