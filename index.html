@@ -14,13 +14,15 @@
 
 <body>
 
-    <div class="whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=541166900672&text=Hola!%20Vengo%20de%20tu%20sitio%20web,%20quiero%20saber%20m%C3%A1s%20sobre..."><img width="50px" src="./images/ws.png" alt="Whatsapp"></a>
-    </div>
+    <section id="fixed">
+        <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=541166900672&text=Hola!%20Vengo%20de%20tu%20sitio%20web,%20quiero%20saber%20m%C3%A1s%20sobre..." target="_blank"><img width="50px" src="./images/ws.png" alt="Whatsapp"></a>
+        </div>
 
-    <div class="perrito">
-       <img width="300" src="./images/perrito.png" alt="">
-    </div>
+        <div class="perrito">
+        <img width="300" src="./images/perrito.png" alt="">
+        </div>
+    </section>
 
     <header>
         <img id="logo" width="100em" src="./images/logo.png" alt="Logo">
@@ -29,7 +31,7 @@
                 <li><a href="./index.html"><img width="30px" src="./images/home.png" onmouseout="this.src='./images/home.png'" onmouseover="this.src='./images/homehover.png'" alt=""></a></li>
                 <li><a href="./pages/servicios.html">Servicios</a>
                     <ul>
-                        <li><a href="./pages/servicios.html#paseos">Paseos recreativos</a></li>
+                        <li><a href="./pages/servicios.html#paseos">Paseos</a></li>
                         <li><a href="./pages/servicios.html#pensionados">Pensionados</a></li>
                         <li><a href="./pages/servicios.html#traslados">Traslados</a></li>
                     </ul>
@@ -40,7 +42,7 @@
                         <li><a href="./pages/manada.html#segundoTurno">Segundo turno</a></li>
                     </ul>  
                 </li>
-                <li><a href="./pages/equipo.html">Equipo</a></li>
+                <li><a href="./pages/sobremi.html">Sobre mí</a></li>
                 <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -48,23 +50,29 @@
      
     </header>   
     
-    <main>
+    <main id="index">
         <section id="portada">
             <div class="portada__container">
-                <iframe class="portada__container__video" width="560" height="315" src="https://www.youtube.com/embed/iucW5evsuLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-                <p class="portada__container__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odit harum neque! Illum culpa voluptates facere nemo, asperiores ipsa dignissimos, voluptatum cumque, porro temporibus qui eveniet ipsam vitae neque assumenda!</p>          
+                <h1 class="portada__container__h1">CLUB PERROS</h1>   
+                <h2 class="portada__container__h2">Paseos recreativos, pensionados y traslados para tu mejor amigo</h2>  
+                <a href="https://goo.gl/maps/qU5PZmH1W9cRmiiS8" target="_blank"><h3 class="portada__container__h3">· Colegiales, CABA y alrededores ·</h3></a>     
             </div>      
         </section>
 
-        <section class="circulos">
-            <div class="circulos__circulo1">
-                <p><strong>Formación en adiestramiento canino</strong></p>
+        <section id="circulos">
+            <div class="circulos__h2">
+                <h2>¿Por qué elegir Club Perros?</h2>
             </div>
-            <div class="circulos__circulo2">
-                <p><strong>10 años de experiencia</strong></p>
-            </div>
-            <div class="circulos__circulo3">
-                <p><strong>Referencias comprobables</strong></p>
+                <div class="circulos__container">
+                <div class="circulos__container__circulo1">
+                    <p><strong>Formación en adiestramiento canino</strong></p>
+                </div>
+                <div class="circulos__container__circulo2">
+                    <p><strong>10 años de experiencia</strong></p>
+                </div>
+                <div class="circulos__container__circulo3">
+                    <p><strong>Referencias comprobables</strong></p>
+                </div>
             </div>
               
         </section>
@@ -73,7 +81,7 @@
 
     <footer>
         <div id="instagram">
-            <a href="https://www.instagram.com/clubperros/"><img width="50px" src="./images/ig.png" alt="Instragram"></a>
+            <a href="https://www.instagram.com/clubperros/" target="_blank"><img width="50px" src="./images/ig.png" alt="Instragram"></a>
         </div>
 
         <div id="copy">

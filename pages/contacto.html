@@ -12,6 +12,7 @@
     <title>Club Perros - Contacto
     </title>
 </head>
+
 <body>
     <div class="whatsapp">
         <a href="https://api.whatsapp.com/send?phone=541166900672&text=Hola!%20Vengo%20de%20tu%20sitio%20web,%20quiero%20saber%20m%C3%A1s%20sobre..."><img width="50px" src="../images/ws.png" alt="Whatsapp"></a>
@@ -28,7 +29,7 @@
                 <li><a href="../index.html"><img width="30px" src="../images/home.png" onmouseout="this.src='../images/home.png'" onmouseover="this.src='../images/homehover.png'" alt=""></a></li>
                 <li><a href="../pages/servicios.html">Servicios</a>
                     <ul>
-                        <li><a href="../pages/servicios.html#paseos">Paseos recreativos</a></li>
+                        <li><a href="../pages/servicios.html#paseos">Paseos</a></li>
                         <li><a href="../pages/servicios.html#pensionados">Pensionados</a></li>
                         <li><a href="../pages/servicios.html#traslados">Traslados</a></li>
                     </ul>
@@ -39,16 +40,35 @@
                         <li><a href="../pages/manada.html#segundoTurno">Segundo turno</a></li>
                     </ul>  
                 </li>
-                <li><a href="../pages/equipo.html">Equipo</a></li>
+                <li><a href="../pages/sobremi.html">Sobre mí</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
-        </nav>
-
-     
+        </nav>   
     </header> 
-    <main>
 
-        <section id="form"> 
+    <main id="contacto">
+        <section id="contacto__redes">
+            <div class="contacto__redes__ws">
+                <a href="https://www.instagram.com/clubperros/" target="_blank">
+                    <img width="30" src="../images/contacto__ws.png" alt="">
+                    <span>1166900672</span> 
+                </a>
+            </div>
+
+            <div class="contacto__redes__ig">
+                <a href="https://api.whatsapp.com/send?phone=541166900672&text=Hola!%20Vengo%20de%20tu%20sitio%20web,%20quiero%20saber%20m%C3%A1s%20sobre...">
+                    <img width="30" src="../images/contacto__ig.png" alt="">
+                    <span>http://www.instagram.com/clubperros</span> 
+                </a>
+            </div>
+        </section>
+
+        <section id="contacto__map">
+            <span>Zonas: Colegiales, CABA y alrededores</span>
+            <iframe height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13140.666589957951!2d-58.46040197908921!3d-34.574649637469676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5dd407c17db%3A0xf700e263552c9fa5!2sColegiales%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1659482916981!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section id="contacto__form"> 
             <form action="" method="post">
                 <fieldset>
                     <legend>Dejame tu consulta</legend>
@@ -69,8 +89,7 @@
                     </div>
                 </fieldset>
             </form>
-        </section>
-        
+        </section>     
     </main>
 
     <footer>
