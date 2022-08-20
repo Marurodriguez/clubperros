@@ -21,10 +21,9 @@
     </div>
 
     <header>
-        <img id="logo" width="100em" src="../images/logo.png" alt="Logo">
+        <a href="../index.html"><img id="logo" width="100em" src="../images/logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo.png'"  alt="Logo"></a>
         <nav>
             <ul>
-                <li><a href="../index.html"><img width="30px" src="../images/home.png" onmouseout="this.src='../images/home.png'" onmouseover="this.src='../images/homehover.png'" alt=""></a></li>
                 <li><a href="../pages/servicios.html">Servicios</a>
                     <ul>
                         <li><a href="../pages/servicios.html#paseos">Paseos</a></li>
@@ -34,8 +33,8 @@
                 </li>
                 <li><a href="./manada.html">Manada</a>
                     <ul>
-                            <li><a href="#primerTurno">Primer turno</a></li>
-                            <li><a href="#segundoTurno">Segundo turno</a></li>
+                            <li><a href="#manada__primerTurno">Primer turno</a></li>
+                            <li><a href="#manada__segundoTurno">Segundo turno</a></li>
                     </ul>  
                 </li>
                 <li><a href="../pages/sobremi.html">Sobre mí</a></li>
@@ -47,7 +46,7 @@
     </header> 
     <main id="manada">
 
-        <h1 class="manada__title">· ¡Conocé a la manada! ·</h1>
+        <h1 class="manada__title">¡Conocé a la manada!</h1>
 
 
         <section id="manada__primerTurno">
@@ -56,37 +55,55 @@
             <ul>
                 <li>
                     <span>Pedrito</span> 
-                    <img width="300" src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="Pedrito">
+                    <div class="card-container">
+                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="Pedrito"></div>
+                        <div class="card back"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, explicabo?</p></div>                    
+                    </div>
                 </li>
                 <li>
                     <span>Chicho</span> 
-                    <img width="300" src="https://images.unsplash.com/photo-1588733454774-74be762253e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Chicho">
+                    <div class="card-container">
+                       <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1588733454774-74be762253e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Chicho"></div>
+                       <div class="card back"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, esse?</p></div>
+                    </div>
                 </li>
                 <li>
                     <span>Mora</span> 
-                    <img width="300" src="https://images.unsplash.com/photo-1598487923673-973c786583d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Mora">
+                    <div class="card-container">
+                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1598487923673-973c786583d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Mora"></div>
+                        <div class="card back"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci!</p></div>
+                    </div>
                 </li>
             </ul>
         </section>
-
+ 
         <section id="manada__segundoTurno">
             <h2>Segundo turno:</h2>
             <ul>
                 <li>
                     <span>Quico</span> 
-                    <img width="300" src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Quico">
+                    <div class="card-container">
+                       <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Quico"></div>
+                       <div class="card back"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur!</p></div>
+                    </div>
                 </li>
-                <li>
+               <li>
                     <span>Pol</span> 
-                    <img width="300" src="https://images.unsplash.com/photo-1591946559594-8c6d3b7391eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Pol">
+                    <div class="card-container">
+                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1591946559594-8c6d3b7391eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Pol"></div>
+                        <div class="card back"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perspiciatis!</p></div>
+                    </div>
                 </li>
                 <li>
                     <span>Atila</span> 
-                    <img width="300" src="https://images.unsplash.com/photo-1568274604780-30c1bcacb31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Atila">
+                    <div class="card-container">
+                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1568274604780-30c1bcacb31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Atila"></div>
+                        <div class="card back"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, sunt.</p></div>
+                    </div>
                 </li>
             </ul>
 
-        </section>
+        </section> 
 
     </main>
 

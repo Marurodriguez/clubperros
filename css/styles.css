@@ -2,11 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #062164f5;
+background: rgb(5,21,39);
+background: radial-gradient(circle, rgba(5,21,39,1) 7%, rgba(1,66,111,1) 67%, rgba(4,100,166,1) 100%);    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 28vh auto 18vh;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
 
 }
 
@@ -14,21 +21,19 @@ body{
 /* estilos header */
 
 header{
+        grid-area: header;
         background-color: rgb(255, 255, 255);
         box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
         opacity: 90%;
         font-size: 0.9rem;
         position: sticky;
         top: 0;
-        width: 100%;
-        height: 28vh;
         display: flex;
         flex-direction: column;
         z-index: 1;
         justify-content: center;
         align-items: center;
         text-align: center;
-        
 }
 
 
@@ -123,14 +128,13 @@ ul li:hover ul{
 
 main{
     display: grid;
-    height: auto;
-    width: 100%;
+    grid-area: main;
 }
 
 
 /* estilos main index */
 
-main#index{
+.index-grid{
     grid-template-columns: 1fr;
     grid-template-rows: 100vh 1fr;
     grid-template-areas: "portada"
@@ -248,6 +252,31 @@ a{
 
 /* estilos main page servicios */
 
+main#servicios{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas: "paseos"
+                        "pensionados"
+                        "traslados";
+}
+
+section[id]{
+    scroll-margin-top: 28vh;
+}
+
+#paseos{
+    grid-area: paseos;
+}
+
+#pensionados{
+    grid-area: pensionados;
+}
+
+#traslados{
+    grid-area: traslados;
+}
+
 #paseos, #pensionados, #traslados{
     display: flex;
     flex-wrap: wrap;
@@ -294,10 +323,26 @@ a{
 #manada{
     color:white;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 100vh 100vh;
+    grid-template-areas:"manada__h1" 
+                        "manada__primerTurno"
+                         "manada__segundoTurno";
+}
+
+
+#manada__primerTurno{
+    grid-area: manada__primerTurno;
+}
+
+#manada__segundoTurno{
+    grid-area: manada__segundoTurno;
 }
 
 #manada h1{
-    margin-top: 8em;
+    margin-top: 1em;
+    grid-area: manada__h1;
 }
 
 #manada h2{
@@ -311,7 +356,7 @@ a{
     margin:2em 0 2em 0;
 }
 
-#manada li{
+#manada ul li{
     display: flex;
     flex-direction: column;
 }
@@ -320,7 +365,47 @@ a{
     border:10px solid #666;
 }
 
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: card;
+    text-align: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
 
+
+
+.card-container:hover{
+    transform: rotateY(-180deg);
+}
+
+.card-container:hover > .back{
+    visibility: visible;
+}
+
+.card{
+    grid-area: card;
+}
+
+.front{
+    transform: rotateY(0deg);
+}
+
+.back{
+    width: 300px;
+    height: 440px;
+    background-color: rgba(255, 255, 255, 0.39);
+    color: #03243a;
+    transform: rotateY(180deg);
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    
+}
 
 /* estilos main page sobre mi */
 
@@ -424,10 +509,9 @@ textarea{
 /* estilos footer */
 
 footer{
+    grid-area: footer;
     background-color: rgba(255, 255, 255, 0.445);
     opacity: 80%;
-    height: 15vh;
-    width: 100%;
     margin-top: 1em;
     display: flex;
     justify-content:flex-end;
