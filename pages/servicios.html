@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/styles.css">
     <title>Club Perros - Servicios</title>
 </head>
@@ -22,7 +25,7 @@
     </div>
 
     <header>
-        <a href="../index.html"><img id="logo" width="100em" src="../images/logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo.png'"  alt="Logo"></a>
+        <a href="../index.html"><img id="logo" class="logo" width="100em" src="../images/logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo.png'"  alt="Logo"></a>
         <nav>
             <ul>
                 <li><a href="./servicios.html">Servicios</a>
@@ -49,8 +52,7 @@
     <main id="servicios">
         <section id="paseos">
 
-            <div class="paseos__img"></div>
-
+            <div class="paseos__img" data-aos="fade-right"></div>
             <div class="paseos__texto">
                 <h2>Paseos recreativos</h2>
                 <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, animi nesciunt, eum id incidunt enim molestiae sit hic dignissimos sunt consequatur, tempore ab est error ea. Quisquam corrupti molestias consequatur. </span>
@@ -59,7 +61,7 @@
         </section>
 
         <section id="pensionados">
-            <div class="pensionados__img"></div>
+            <div class="pensionados__img" data-aos="fade-right"></div>
             <div class="pensionados__texto">
                 <h2>Pensionados</h2>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde repellendus explicabo modi quisquam in voluptas tempora quidem eum animi corrupti iure sit eligendi ut quo aliquam delectus inventore expedita, neque facere vel consequuntur assumenda nemo doloribus? Nemo ab reiciendis dolor? </span>
@@ -67,7 +69,7 @@
         </section>
 
         <section id="traslados">
-            <div class="traslados__img"></div>
+            <div class="traslados__img" data-aos="fade-right"></div>
             <div class="traslados__texto">
                 <h2>Traslados</h2>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vitae amet in, incidunt pariatur totam natus repellat ipsam, praesentium voluptates voluptatum blanditiis sed hic enim nesciunt officia vero consequuntur! Cumque. </span>
@@ -84,6 +86,9 @@
             <a href="https://www.instagram.com/clubperros/"><img width="50px" src="../images/ig.png" alt="Instragram"></a>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

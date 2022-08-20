@@ -34,8 +34,12 @@ header{
         justify-content: center;
         align-items: center;
         text-align: center;
+        transition: transform 1s;
 }
 
+.logo:hover{
+    transform: scale(0.9);
+}
 
 nav ul{
     width: 100%;
@@ -157,8 +161,15 @@ main{
     background-size: cover;
     background-position:center;
     box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
+    animation: cambio 9s infinite alternate normal ease-in;
 
 }
+
+/* @keyframes cambio {
+    50%{
+       background-image: url(""); 
+    }
+} */
 
 .portada__container__h1{
     padding-top: 2em;
@@ -226,12 +237,13 @@ a{
     justify-content: center;
     align-items: center;
     box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
-
+    transition: transform 1s; 
 }
 
 .circulos__container__circulo1{
     grid-area: circ1;
 }
+
 
 .circulos__container__circulo2{
     grid-area: circ2;
@@ -243,6 +255,7 @@ a{
 
 .circulos__container__circulo1:hover, .circulos__container__circulo2:hover, .circulos__container__circulo3:hover{
     background: #fdf905;
+    transform: scale(1.1);
 }
 
 #circulos p{
@@ -377,22 +390,21 @@ section[id]{
     transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-
-
 .card-container:hover{
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .front{
     transform: rotateY(-180deg);
 }
 
 .card-container:hover > .back{
     visibility: visible;
+    transform: rotateY(180deg);
 }
 
 .card{
     grid-area: card;
-}
-
-.front{
-    transform: rotateY(0deg);
 }
 
 .back{
@@ -400,7 +412,6 @@ section[id]{
     height: 440px;
     background-color: rgba(255, 255, 255, 0.39);
     color: #03243a;
-    transform: rotateY(180deg);
     visibility: hidden;
     display: flex;
     align-items: center;
@@ -614,4 +625,3 @@ header{
 
 
 }
-
