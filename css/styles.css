@@ -18,10 +18,10 @@ header{
         box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
         opacity: 90%;
         font-size: 0.9rem;
-        position: fixed;
+        position: sticky;
         top: 0;
         width: 100%;
-        height: 12em;
+        height: 28vh;
         display: flex;
         flex-direction: column;
         z-index: 1;
@@ -49,7 +49,7 @@ nav ul li a:link, a:visited, a:active {
 }
 
 nav ul li a{
-    padding: 1.5em;
+    padding-left: 1em;
 }
 
 nav ul li a:hover{
@@ -122,18 +122,31 @@ ul li:hover ul{
 /* estilos main */
 
 main{
-    margin-top: 10.5em;
+    display: grid;
+    height: auto;
+    width: 100%;
 }
 
 
 /* estilos main index */
 
 main#index{
-    height: 60em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 1fr;
+    grid-template-areas: "portada"
+                         "circulos";
+}
+
+#portada{
+    grid-area: portada;
+}
+
+#circulos{
+    grid-area: circulos;
 }
 
 .portada__container{
-    height: 30em;
+    height: 100vh;
     text-align: center;
     background-color: #666;
     background-image: url("../images/banner.jpg");
@@ -144,7 +157,7 @@ main#index{
 }
 
 .portada__container__h1{
-    padding: 2em 8em 0 8em;
+    padding-top: 2em;
     color: white;
     text-shadow: .1em .1em .1em black;
     font-size: 3.5rem;
@@ -170,16 +183,34 @@ a{
 
 
 #circulos{
-    margin-top: 4em;
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-areas: "circulos__h2"
+                         "circulos__container" ;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2em;
+}
+
+.circulos__h2{
+    grid-area: circulos__h2;
 }
 
 .circulos__container{
-    margin-top: 3em;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-evenly;
+    grid-area: circulos__container;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "circ1 circ2 circ3";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
 .circulos__container__circulo1, .circulos__container__circulo2, .circulos__container__circulo3 {
@@ -192,6 +223,18 @@ a{
     align-items: center;
     box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
 
+}
+
+.circulos__container__circulo1{
+    grid-area: circ1;
+}
+
+.circulos__container__circulo2{
+    grid-area: circ2;
+}
+
+.circulos__container__circulo3{
+    grid-area: circ3;
 }
 
 .circulos__container__circulo1:hover, .circulos__container__circulo2:hover, .circulos__container__circulo3:hover{
@@ -263,6 +306,7 @@ a{
 
 #manada ul{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin:2em 0 2em 0;
 }
@@ -272,23 +316,42 @@ a{
     flex-direction: column;
 }
 
+#manada li img{
+    border:10px solid #666;
+}
+
+
 
 /* estilos main page sobre mi */
 
 #sobremi{
-    height: 40em;
     color: white;
+
 }
 
 #sobremi section{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sobreMiImg sobreMiTexto";
     align-items: center;
+
+}
+
+.sobremi__img{
+    grid-area: sobreMiImg;
+}
+
+.sobremi__texto{
+    grid-area: sobreMiTexto;
+    padding: 1em;
 }
 
 #sobremi img{
-    margin: 3em;
+    margin: 2em;
     border-radius: 5%;
     box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
+    border:10px solid #666;
 
 }
 
@@ -298,26 +361,25 @@ a{
 #contacto{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
     grid-template-areas: "redes form"
                          "map form";
-    row-gap: 3em;
-    column-gap: 3em;
-    height: 40em;
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
     color: white;
 }
 
 #contacto__form{
-    width: 10em;
     text-align: center;
-    grid-area: form;
     align-self: center;
+    justify-self: center;
+    grid-area: form;
+    margin: 1em;
 }
 
 #contacto__redes{
     grid-area: redes;
     margin: 4em 0 0 5em;
-    
 }
 
 #contacto__redes a{
@@ -331,7 +393,7 @@ a{
 
 #contacto__map{
     grid-area: map;
-    margin:5em;
+    margin:4em;
 }
 
 
@@ -364,19 +426,108 @@ textarea{
 footer{
     background-color: rgba(255, 255, 255, 0.445);
     opacity: 80%;
+    height: 15vh;
     width: 100%;
-    height: 6em;
+    margin-top: 1em;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+
+#copy{
+    font-size: 0.8rem;
+    margin-right: 1em;
 }
 
 #instagram{
-    float: right;
     margin-right: 5em;
-    margin-top: 1em;
 }
 
-#copy{
-    float: left;
-    margin: 2% 20%;
-    font-size: 0.8rem;
+@media only screen and (max-width: 1024px){
+
+#paseos, #pensionados, #traslados{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "serviciosImg"
+                         "serviciosTexto";
+    justify-content: center;
+    justify-items: center;
+    align-items:flex-start;
+}
+
+.paseos__img, .pensionados__img, .traslados__img{
+    grid-area: serviciosImg;
+}
+
+.paseos__texto, .pensionados__texto, .traslados__texto{
+    grid-area: serviciosTexto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+    
+#circulos{
+    margin-top: .5em; 
+}
+
+.circulos__container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "circ1" 
+                        "circ2" 
+                        "circ3";
+    row-gap: 1em;
+}
+
+#contacto{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.2fr 0.5fr;
+    grid-template-areas: "redes"
+                         "map"
+                         "form";
+    justify-items: center;
+}
+
+
+}
+
+@media only screen and (max-width: 500px){
+
+header{
+    font-size: .7rem;
+}
+
+.circulos__container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "circ1" 
+                        "circ2" 
+                        "circ3";
+    row-gap: 1em;
+}
+
+#sobremi section{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sobreMiImg" 
+                        "sobreMiTexto";
+    align-items: flex-start;
+
+}
+
+
+#contacto{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.2fr 0.5fr;
+    grid-template-areas: "redes"
+                         "map"
+                         "form";
+    justify-items: center;
+}
+
+
+
+
 }
 
