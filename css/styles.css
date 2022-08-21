@@ -7,8 +7,8 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-background: rgb(5,21,39);
-background: radial-gradient(circle, rgba(5,21,39,1) 7%, rgba(1,66,111,1) 67%, rgba(4,100,166,1) 100%);    display: grid;
+    background: rgb(5,21,39);
+    background: radial-gradient(circle, rgba(5,21,39,1) 7%, rgba(1,66,111,1) 67%, rgba(4,100,166,1) 100%);    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 28vh auto 18vh;
     grid-template-areas: "header"
@@ -50,6 +50,11 @@ nav ul li{
     display: inline-block;
     text-align: center;
     position: relative;
+    transition: transform 0.5s;
+}
+
+nav ul li:hover{
+    transform: scale(0.95);
 }
 
 nav ul li a:link, a:visited, a:active {
@@ -62,7 +67,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #046ba8;
+    color: #01395c;
     cursor: pointer;
 }
 
@@ -403,7 +408,7 @@ section[id]{
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 100vh 100vh;
+    grid-template-rows: 150px auto auto;
     grid-template-areas:"manada__h1" 
                         "manada__primerTurno"
                          "manada__segundoTurno";
@@ -639,6 +644,16 @@ footer{
                         "circ3";
     row-gap: 1em;
 }
+
+#sobremi section{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sobreMiImg" 
+                        "sobreMiTexto";
+    align-items: flex-start;
+
+}
+
 
 #contacto{
     grid-template-columns: 1fr;
