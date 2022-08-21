@@ -147,6 +147,9 @@ main{
 
 #portada{
     grid-area: portada;
+    overflow: hidden;
+    box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
+
 }
 
 #circulos{
@@ -156,20 +159,61 @@ main{
 .portada__container{
     height: 100vh;
     text-align: center;
-    background-color: #666;
-    background-image: url("../images/banner.jpg");
+/*     background-image: url("../images/banner.jpg");
     background-size: cover;
-    background-position:center;
-    box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
-    animation: cambio 9s infinite alternate normal ease-in;
+    background-position:center; */
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "portada";
+    justify-content: center;
+    align-items: center;
+}
+
+
+.texto{
+    grid-area: portada;
+}
+
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    grid-area: portada;
+}
+
+.slider ul{
+    display:flex;
+    width: 400%;
+    animation: slider 15s infinite alternate ease-in-out;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes slider {
+    0%{ margin-left: 0; }
+    20%{ margin-left: 0; }
+
+    25%{ margin-left: -100%; }
+    45%{ margin-left: -100%; }
+
+    50%{ margin-left: -200%; }
+    70%{ margin-left: -200%; }
+
+    75%{ margin-left: -300%; }
+    100%{ margin-left: -300%; }
 
 }
 
-/* @keyframes cambio {
-    50%{
-       background-image: url(""); 
-    }
-} */
+
 
 .portada__container__h1{
     padding-top: 2em;
