@@ -97,6 +97,12 @@ ul li:hover ul{
     z-index: 1;
 }
 
+.perritos:hover{
+    transform: scale(1.05);
+    transition: transform 1s; 
+
+}
+
 .perrito{
     position: fixed;
     bottom: -5.7em;
@@ -199,24 +205,20 @@ main{
 }
 
 .slider1{
-    background-color: red;
     background-image: url("../images/banner.jpg");
 }
 
 .slider2{
-    background-color: blue;
     background-image: url("../images/banner2.jpg");
 
 }
 
 .slider3{
-    background-color: yellow;
     background-image: url("../images/banner3.jpg");
 
 }
 
 .slider4{
-    background-color: green;
     background-image: url("../images/banner4.jpg");
 
 }
@@ -298,16 +300,21 @@ a{
     align-items: center;
 }
 
-.circulos__container__circulo1, .circulos__container__circulo2, .circulos__container__circulo3 {
+.circulos {
     width: 14em;
     height: 14em;
     border-radius: 50%;
     background: #c9c764;
+    background-image: url(../images/huella.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 1em 1em 1em 1em rgba(0,0,0,0.50);
     transition: transform 1s; 
+    opacity: 60%;
 }
 
 .circulos__container__circulo1{
@@ -324,13 +331,15 @@ a{
 }
 
 .circulos__container__circulo1:hover, .circulos__container__circulo2:hover, .circulos__container__circulo3:hover{
-    background: #fdf905;
     transform: scale(1.1);
+    opacity: 100%;
 }
 
 #circulos p{
     text-transform: uppercase;
 }
+
+
 
 
 /* estilos main page servicios */
