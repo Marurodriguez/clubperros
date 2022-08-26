@@ -23,29 +23,44 @@
         <img width="400" src="../images/perrito4.png" alt="">
     </div>
 
-    <header class="header sombreado">
-        <a href="../index.html"><img id="logo" class="logo" width="100em" src="../images/logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo.png'"  alt="Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="../pages/servicios.html">Servicios</a>
-                    <ul>
-                        <li><a href="../pages/servicios.html#paseos">Paseos</a></li>
-                        <li><a href="../pages/servicios.html#pensionados">Pensionados</a></li>
-                        <li><a href="../pages/servicios.html#traslados">Traslados</a></li>
+    <header class="header sombreado bg-white">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid flex-lg-column">
+                <a class="navbar-brand" href="../index.html"><img id="logo" class="logo" width="100" src="../images/logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo.png'"  alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../pages/servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/servicios.html#paseos">Paseos</a></li>
+                                <li><a class="dropdown-item" href="../pages/servicios.html#pensionados">Pensionados</a></li>
+                                <li><a class="dropdown-item" href="../pages/servicios.html#traslados">Traslados</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../pages/manada.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Manada
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/manada.html#primerTurno">Primer turno</a></li>
+                                <li><a class="dropdown-item" href="../pages/manada.html#segundoTurno">Segundo turno</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/sobremi.html">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="../pages/manada.html">Manada</a>
-                    <ul>
-                            <li><a href="../pages/manada.html#primerTurno">Primer turno</a></li>
-                            <li><a href="../pages/manada.html#segundoTurno">Segundo turno</a></li>
-                    </ul>  
-                </li>
-                <li><a href="./sobremi.html">Sobre mí</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
-     
+                </div>
+            </div>
+        </nav> 
     </header> 
     <main id="sobremi">
 

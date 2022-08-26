@@ -9,7 +9,7 @@ body{
     background: rgb(5,21,39);
     background: radial-gradient(circle, rgba(5,21,39,1) 7%, rgba(1,66,111,1) 67%, rgba(4,100,166,1) 100%);    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 28vh auto 18vh;
+    grid-template-rows: auto auto 18vh;
     grid-template-areas: "header"
                         "main"
                         "footer";
@@ -19,19 +19,18 @@ body{
 
 /* estilos header */
 
+.bg-white{
+    background-color: rgb(255, 255, 255);
+}
+
+
 header{
         grid-area: header;
-        background-color: rgb(255, 255, 255);
         opacity: 90%;
         font-size: 0.9rem;
         position: sticky;
         top: 0;
-        display: flex;
-        flex-direction: column;
         z-index: 1;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         transition: transform 1s;
 }
 
@@ -43,16 +42,7 @@ header{
     transform: scale(0.9);
 }
 
-nav ul{
-    width: 100%;
-    list-style-type: none;
-    
-}
-
 nav ul li{
-    display: inline-block;
-    text-align: center;
-    position: relative;
     transition: transform 0.5s;
 }
 
@@ -65,32 +55,9 @@ nav ul li a:link, a:visited, a:active {
     color: black;
 }
 
-nav ul li a{
-    padding-left: 1em;
-}
-
 nav ul li a:hover{
-    color: #01395c;
+    color: #01395c !important;
     cursor: pointer;
-}
-
-ul li ul {
-    position: absolute;
-    right: 0;
-    display: none;
-}
-
-ul ul li{
-    width: 10em;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.50);
-    border: 0.1em solid black;
-    padding: 0.5em;
-}
-
-
-ul li:hover ul{
-    display: block;
 }
 
 .whatsapp{
@@ -387,11 +354,11 @@ section[id]{
 }
 
 
-#manada__primerTurno{
+.manada__primerTurno{
     grid-area: manada__primerTurno;
 }
 
-#manada__segundoTurno{
+.manada__segundoTurno{
     grid-area: manada__segundoTurno;
 }
 
@@ -420,11 +387,11 @@ section[id]{
     border:10px solid #666;
 }
 
-.card-container{
+.photo-container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: card;
+    grid-template-areas: "photo";
     text-align: center;
     justify-content: center;
     transform: rotateY(0deg);
@@ -432,21 +399,21 @@ section[id]{
     transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.card-container:hover{
+.photo-container:hover{
     transform: rotateY(180deg);
 }
 
-.card-container:hover .front{
+.photo-container:hover .front{
     transform: rotateY(-180deg);
 }
 
-.card-container:hover > .back{
+.photo-container:hover > .back{
     visibility: visible;
     transform: rotateY(180deg);
 }
 
-.card{
-    grid-area: card;
+.photo{
+    grid-area: photo;
 }
 
 .back{
@@ -454,10 +421,9 @@ section[id]{
     height: 440px;
     background-color: rgba(255, 255, 255, 0.39);
     color: #03243a;
-    visibility: hidden;
+    visibility: hidden;    
     display: flex;
     align-items: center;
-    
 }
 
 /* estilos main page sobre mi */

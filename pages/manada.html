@@ -23,85 +23,100 @@
         <img width="270" src="../images/perrito3.png" alt="">
     </div>
 
-    <header class="header sombreado">
-        <a href="../index.html"><img id="logo" class="logo" width="100em" src="../images/logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo.png'"  alt="Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="../pages/servicios.html">Servicios</a>
-                    <ul>
-                        <li><a href="../pages/servicios.html#paseos">Paseos</a></li>
-                        <li><a href="../pages/servicios.html#pensionados">Pensionados</a></li>
-                        <li><a href="../pages/servicios.html#traslados">Traslados</a></li>
+    <header class="header sombreado bg-white">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid flex-lg-column">
+                <a class="navbar-brand" href="../index.html"><img id="logo" class="logo" width="100" src="../images/logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo.png'"  alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../pages/servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/servicios.html#paseos">Paseos</a></li>
+                                <li><a class="dropdown-item" href="../pages/servicios.html#pensionados">Pensionados</a></li>
+                                <li><a class="dropdown-item" href="../pages/servicios.html#traslados">Traslados</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../pages/manada.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Manada
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/manada.html#primerTurno">Primer turno</a></li>
+                                <li><a class="dropdown-item" href="../pages/manada.html#segundoTurno">Segundo turno</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/sobremi.html">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="./manada.html">Manada</a>
-                    <ul>
-                            <li><a href="#manada__primerTurno">Primer turno</a></li>
-                            <li><a href="#manada__segundoTurno">Segundo turno</a></li>
-                    </ul>  
-                </li>
-                <li><a href="../pages/sobremi.html">Sobre mí</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
-     
+                </div>
+            </div>
+      </nav> 
     </header> 
     <main id="manada">
 
         <h1 class="manada__title" data-aos="fade-down">¡Conocé a la manada!</h1>
 
 
-        <section id="manada__primerTurno">
+        <section id="primerTurno" class="manada__primerTurno">
             <h2 class="animate__animated animate__bounce">Primer turno:</h2>
 
             <ul>
                 <li>
                     <span>Pedrito</span> 
-                    <div class="card-container">
-                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="Pedrito"></div>
-                        <div class="card back"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, explicabo?</p></div>                    
+                    <div class="photo-container">
+                        <div class="photo front"><img width="300" src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="Pedrito"></div>
+                        <div class="photo back"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, explicabo?</p></div>                    
                     </div>
                 </li>
                 <li>
                     <span>Chicho</span> 
-                    <div class="card-container">
-                       <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1588733454774-74be762253e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Chicho"></div>
-                       <div class="card back"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, esse?</p></div>
+                    <div class="photo-container">
+                       <div class="photo front"><img width="300" src="https://images.unsplash.com/photo-1588733454774-74be762253e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Chicho"></div>
+                       <div class="photo back"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, esse?</p></div>
                     </div>
                 </li>
                 <li>
                     <span>Mora</span> 
-                    <div class="card-container">
-                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1598487923673-973c786583d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Mora"></div>
-                        <div class="card back"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci!</p></div>
+                    <div class="photo-container">
+                        <div class="photo front"><img width="300" src="https://images.unsplash.com/photo-1598487923673-973c786583d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Mora"></div>
+                        <div class="photo back"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci!</p></div>
                     </div>
                 </li>
             </ul>
         </section>
  
-        <section id="manada__segundoTurno">
+        <section id="segundoTurno" class="manada__segundoTurno">
             <h2 class="animate__animated animate__bounce">Segundo turno:</h2>
             <ul>
                 <li>
                     <span>Quico</span> 
-                    <div class="card-container">
-                       <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Quico"></div>
-                       <div class="card back"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur!</p></div>
+                    <div class="photo-container">
+                       <div class="photo front"><img width="300" src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Quico"></div>
+                       <div class="photo back"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur!</p></div>
                     </div>
                 </li>
                <li>
                     <span>Pol</span> 
-                    <div class="card-container">
-                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1591946559594-8c6d3b7391eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Pol"></div>
-                        <div class="card back"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perspiciatis!</p></div>
+                    <div class="photo-container">
+                        <div class="photo front"><img width="300" src="https://images.unsplash.com/photo-1591946559594-8c6d3b7391eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Pol"></div>
+                        <div class="photo back"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perspiciatis!</p></div>
                     </div>
                 </li>
                 <li>
                     <span>Atila</span> 
-                    <div class="card-container">
-                        <div class="card front"><img width="300" src="https://images.unsplash.com/photo-1568274604780-30c1bcacb31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Atila"></div>
-                        <div class="card back"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, sunt.</p></div>
+                    <div class="photo-container">
+                        <div class="photo front"><img width="300" src="https://images.unsplash.com/photo-1568274604780-30c1bcacb31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Atila"></div>
+                        <div class="photo back"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, sunt.</p></div>
                     </div>
                 </li>
             </ul>
