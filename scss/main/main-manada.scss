@@ -1,0 +1,84 @@
+
+#manada{
+    color:white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto auto;
+    grid-template-areas:"manada__h1" 
+                        "manada__primerTurno"
+                         "manada__segundoTurno";
+}
+
+
+.manada__primerTurno{
+    grid-area: manada__primerTurno;
+}
+
+.manada__segundoTurno{
+    grid-area: manada__segundoTurno;
+}
+
+#manada h1{
+    margin-top: 1em;
+    grid-area: manada__h1;
+}
+
+#manada h2{
+    margin-top: 2em;
+}
+
+#manada ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:2em 0 2em 0;
+}
+
+#manada ul li{
+    display: flex;
+    flex-direction: column;
+}
+
+#manada li img{
+    border:10px solid #666;
+}
+
+.photo-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "photo";
+    text-align: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.photo-container:hover{
+    transform: rotateY(180deg);
+}
+
+.photo-container:hover .front{
+    transform: rotateY(-180deg);
+}
+
+.photo-container:hover > .back{
+    visibility: visible;
+    transform: rotateY(180deg);
+}
+
+.photo{
+    grid-area: photo;
+}
+
+.back{
+    width: 300px;
+    height: 440px;
+    background-color: rgba(255, 255, 255, 0.39);
+    color: #03243a;
+    visibility: hidden;    
+    display: flex;
+    align-items: center;
+}

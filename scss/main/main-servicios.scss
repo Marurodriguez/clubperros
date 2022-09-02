@@ -1,0 +1,65 @@
+
+
+main#servicios{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas: "paseos"
+                        "pensionados"
+                        "traslados";
+}
+
+section[id]{
+    scroll-margin-top: 28vh;
+}
+
+#paseos{
+    grid-area: paseos;
+}
+
+#pensionados{
+    grid-area: pensionados;
+}
+
+#traslados{
+    grid-area: traslados;
+}
+
+#paseos, #pensionados, #traslados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    word-break:break-all;
+    align-items: center;
+}
+
+.paseos__img, .pensionados__img, .traslados__img{
+    height: 350px;
+    width: 350px;
+    border-radius:50%;
+    background-size: cover;
+    background-position: center;
+    border:10px solid #666;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.paseos__img{
+    background-image: url("https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+}
+
+.pensionados__img{
+    background-image: url("https://cdn.redcanina.es/wp-content/uploads/2019/01/16213607/perro-durmiendo-mucho-750x375.jpg");
+    background-position: right;
+}
+
+
+.traslados__img{
+    background-image: url("https://st.depositphotos.com/1146092/5090/i/600/depositphotos_50901051-stock-photo-dog-window-car.jpg");
+    background-position: right;
+}
+
+.paseos__texto, .pensionados__texto, .traslados__texto{
+    width: 50vw;
+    color: white;
+}

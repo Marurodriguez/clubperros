@@ -1,0 +1,56 @@
+
+
+#sobremi{
+    color: white;
+
+}
+
+#sobremi section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sobreMiImg sobreMiTexto";
+    align-items: center;
+
+}
+
+.sobremi__img{
+    grid-area: sobreMiImg;
+}
+
+.sobremi__texto{
+    grid-area: sobreMiTexto;
+    padding: 1em;
+}
+
+#sobremi img{
+    margin: 2em;
+    border-radius: 5%;
+    border:10px solid #666;
+
+}
+
+@media only screen and (max-width: 1024px){
+
+    #sobremi section{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "sobreMiImg" 
+                            "sobreMiTexto";
+        align-items: flex-start;
+    
+    }
+}    
+
+@media only screen and (max-width: 500px){
+
+
+    #sobremi section{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "sobreMiImg" 
+                            "sobreMiTexto";
+        align-items: flex-start;
+    
+    }
+}    

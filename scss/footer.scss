@@ -1,0 +1,50 @@
+
+footer{
+    grid-area: footer;
+    margin-top: 1em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "footerUno"
+                        "footerDos";
+    align-items: center;
+}
+
+.footerUno{
+    background-color: rgba(255, 255, 255, 0.445);
+    grid-area: footerUno;
+    height: 7em;
+    opacity: 80%;
+    display: grid;
+}
+
+.footerUno__texto{
+    font-size: 1rem;
+    color: white;
+    justify-self: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+.footerUno__instagram{
+    margin-right: 2%;
+    align-self:flex-end;
+    justify-self: end;
+}
+
+
+.footerDos{
+    background-color: rgba(255, 255, 255, 0.445);
+    grid-area: footerDos;
+    height: 2em;
+}
+
+.footerDos__copy{
+    font-size: 0.6rem;
+    margin-right: 1em;
+    color: white;
+    text-align: center;
+    margin-top: 0.7em;
+}
+
+

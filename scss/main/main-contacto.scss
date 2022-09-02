@@ -1,0 +1,82 @@
+
+#contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: "redes form"
+                         "map form";
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+    color: white;
+    place-items: center;
+}
+
+#contacto__form{
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    grid-area: form;
+    margin: 1em;
+}
+
+#contacto__redes{
+    grid-area: redes;
+}
+
+#contacto__redes a{
+    color: lightgray;
+}
+
+#contacto__map{
+    grid-area: map;
+}
+
+label{
+    display: block;
+    margin-top: 1em;
+}
+
+#submit{
+    padding: 0.5em;
+    margin: 1em;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+textarea{
+    font-family: 'Poppins', sans-serif;
+    margin: 2em;
+    padding: 1em;
+}
+
+#nombre, #email, #contacto{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0.5em;
+}
+
+@media only screen and (max-width: 1024px){
+
+    #contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.2fr 0.5fr;
+        grid-template-areas: "redes"
+                             "map"
+                             "form";
+        justify-items: center;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+
+
+    #contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.2fr 0.5fr;
+        grid-template-areas: "redes"
+                             "map"
+                             "form";
+        justify-items: center;
+    }
+}
+    

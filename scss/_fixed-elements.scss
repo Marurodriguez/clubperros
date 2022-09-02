@@ -1,0 +1,45 @@
+.whatsapp{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 1;
+}
+
+.perritos{
+    position: fixed;
+    .perritos:hover{
+        transform: scale(1.05);
+        transition: transform 1s; 
+    
+    }
+}
+
+.perrito{
+    bottom: -5.7em;
+    left: -4.1em;
+    z-index: 2;
+}
+
+.perrito2{
+    bottom: -7em;
+    left: 1em;
+    z-index: 2;
+}
+
+.perrito3{
+    bottom: -5.7em;
+    left: -1em;
+    z-index: 2;
+}
+
+.perrito4{
+    bottom: -0.5em;
+    left: -12em;
+    z-index: 2;
+}
+
+.perrito5{
+    bottom: -7.1em;
+    left: 0em;
+    z-index: 2;
+}

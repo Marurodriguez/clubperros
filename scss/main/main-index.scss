@@ -1,0 +1,202 @@
+.index-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 1fr;
+    grid-template-areas: "portada"
+                         "circulos";
+}
+
+#portada{
+    grid-area: portada;
+}
+
+#circulos{
+    grid-area: circulos;
+}
+
+.portada__container{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "portada";
+    justify-content: center;
+    align-items: center;
+}
+
+
+.texto{
+    grid-area: portada;
+}
+
+.carousel{
+    grid-area: portada;
+}
+
+.carousel1{
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.carousel2{
+    background-image: url(../images/banner2.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel3{
+    background-image: url(../images/banner3.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.portada__container__h1{
+    color: white;
+    text-shadow: .1em .1em .1em black;
+    font-size: 3.5rem;
+}
+
+.portada__container__h2, .circulos__h2{
+    padding: 1em 8em 0 8em;
+    color: white;
+    text-shadow: .1em .1em .1em black;
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.portada__container__h3{
+    padding: 1em 8em 0 8em;
+    color: lightgray;
+    text-shadow: .4em .5em 1em black;
+    font-size: .8rem;
+}
+
+
+#circulos{
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-areas: "circulos__h2"
+                         "circulos__container" ;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2em;
+}
+
+.circulos__h2{
+    grid-area: circulos__h2;
+}
+
+.circulos__container{
+    grid-area: circulos__container;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "circ1 circ2 circ3";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.circulos {
+    width: 14em;
+    height: 14em;
+    border-radius: 50%;
+    background: #c9c764;
+    background-image: url(../images/huella.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s; 
+    opacity: 60%;
+}
+
+.circulos__container__circulo1{
+    grid-area: circ1;
+}
+
+
+.circulos__container__circulo2{
+    grid-area: circ2;
+}
+
+.circulos__container__circulo3{
+    grid-area: circ3;
+}
+
+.circulos__container__circulo1:hover, .circulos__container__circulo2:hover, .circulos__container__circulo3:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+#circulos p{
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 1024px){
+
+
+    #paseos, #pensionados, #traslados{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "serviciosImg"
+                             "serviciosTexto";
+        justify-content: center;
+        justify-items: center;
+        align-items:flex-start;
+    }
+    
+    .paseos__img, .pensionados__img, .traslados__img{
+        grid-area: serviciosImg;
+    }
+    
+    .paseos__texto, .pensionados__texto, .traslados__texto{
+        grid-area: serviciosTexto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+        
+    #circulos{
+        margin-top: .5em; 
+    }
+    
+    .circulos__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "circ1" 
+                            "circ2" 
+                            "circ3";
+        row-gap: 1em;
+    }
+}    
+
+
+@media only screen and (max-width: 500px){
+
+    .circulos__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "circ1" 
+                            "circ2" 
+                            "circ3";
+        row-gap: 1em;
+    }
+
+}

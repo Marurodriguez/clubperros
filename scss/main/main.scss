@@ -1,0 +1,11 @@
+@import './main-index.scss';
+@import './main-servicios.scss';
+@import './main-manada.scss';
+@import './main-sobremi.scss';
+@import './main-contacto.scss';
+
+
+main{
+    display: grid;
+    grid-area: main;
+}
