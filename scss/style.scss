@@ -27,11 +27,14 @@ body{
 header{
         grid-area: header;
         opacity: 90%;
-        font-size: 0.9rem;
         position: sticky;
         top: 0;
         z-index: 1;
         transition: transform 1s;
+}
+
+header li{
+    font-size: calc(0.6rem + .2vw);
 }
 
 .sombreado{
@@ -470,6 +473,7 @@ section[id]{
     grid-row-gap: 1em;
     grid-column-gap: 1em;
     color: white;
+    place-items: center;
 }
 
 #contacto__form{
@@ -482,23 +486,15 @@ section[id]{
 
 #contacto__redes{
     grid-area: redes;
-    margin: 4em 0 0 5em;
 }
 
 #contacto__redes a{
     color: lightgray;
 }
 
-#contacto__redes__ig{
-    margin-top: 2em;
-}
-
-
 #contacto__map{
     grid-area: map;
-    margin:4em;
 }
-
 
 label{
     display: block;
@@ -579,6 +575,10 @@ footer{
 
 @media only screen and (max-width: 1024px){
 
+header{
+    position:unset;
+}
+
 #paseos, #pensionados, #traslados{
     display: grid;
     grid-template-columns: 1fr;
@@ -637,10 +637,6 @@ footer{
 
 @media only screen and (max-width: 500px){
 
-header{
-    font-size: .7rem;
-}
-
 .circulos__container{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -668,8 +664,4 @@ header{
                          "form";
     justify-items: center;
 }
-
-
-
-
 }
