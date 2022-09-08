@@ -1,19 +1,17 @@
 @import './variables';
+@import './mixins';
 @import './fixed-elements';
 @import './header';
 @import './main/main.scss';
 @import './footer';
 
 *{
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+    @include reset;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    background: rgb(5,21,39);
-    background: radial-gradient(circle, rgba(5,21,39,1) 7%, rgba(1,66,111,1) 67%, rgba(4,100,166,1) 100%);    
+    background: map-get($colores, fondo);    
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 18vh;
