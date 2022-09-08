@@ -1,20 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth; }
+.whatsapp {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 1; }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #051527;
-  background: radial-gradient(circle, #051527 7%, #01426f 67%, #0464a6 100%);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto 18vh;
-  grid-template-areas: "header" "main" "footer"; }
+.perritos {
+  position: fixed; }
+  .perritos .perritos:hover {
+    transform: scale(1.05);
+    transition: transform 1s; }
 
-/* estilos header */
-.bg-white {
-  background-color: white; }
+.perrito {
+  bottom: -5.7em;
+  left: -4.1em;
+  z-index: 2; }
+
+.perrito2 {
+  bottom: -7em;
+  left: 1em;
+  z-index: 2; }
+
+.perrito3 {
+  bottom: -5.7em;
+  left: -1em;
+  z-index: 2; }
+
+.perrito4 {
+  bottom: -0.5em;
+  left: -12em;
+  z-index: 2; }
+
+.perrito5 {
+  bottom: -7.1em;
+  left: 0em;
+  z-index: 2; }
 
 header {
   grid-area: header;
@@ -23,9 +42,20 @@ header {
   top: 0;
   z-index: 1;
   transition: transform 1s; }
+  header nav ul li {
+    transition: transform 0.5s;
+    font-size: calc(0.6rem + .2vw); }
+    header nav ul li:hover {
+      transform: scale(0.95); }
+    header nav ul li a:link, header nav ul li a:visited, header nav ul li a:active {
+      text-decoration: none;
+      color: black; }
+    header nav ul li a:hover {
+      color: #01395c !important;
+      cursor: pointer; }
 
-header li {
-  font-size: calc(0.6rem + .2vw); }
+.bg-white {
+  background-color: white; }
 
 .sombreado {
   box-shadow: 1em 1em 1em 1em rgba(0, 0, 0, 0.5); }
@@ -33,66 +63,10 @@ header li {
 .logo:hover {
   transform: scale(0.9); }
 
-nav ul li {
-  transition: transform 0.5s; }
+@media only screen and (max-width: 1024px) {
+  header {
+    position: unset; } }
 
-nav ul li:hover {
-  transform: scale(0.95); }
-
-nav ul li a:link, a:visited, a:active {
-  text-decoration: none;
-  color: black; }
-
-nav ul li a:hover {
-  color: #01395c !important;
-  cursor: pointer; }
-
-.whatsapp {
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-  z-index: 1; }
-
-.perritos:hover {
-  transform: scale(1.05);
-  transition: transform 1s; }
-
-.perrito {
-  position: fixed;
-  bottom: -5.7em;
-  left: -4.1em;
-  z-index: 2; }
-
-.perrito2 {
-  position: fixed;
-  bottom: -7em;
-  left: 1em;
-  z-index: 2; }
-
-.perrito3 {
-  position: fixed;
-  bottom: -5.7em;
-  left: -1em;
-  z-index: 2; }
-
-.perrito4 {
-  position: fixed;
-  bottom: -0.5em;
-  left: -12em;
-  z-index: 2; }
-
-.perrito5 {
-  position: fixed;
-  bottom: -7.1em;
-  left: 0em;
-  z-index: 2; }
-
-/* estilos main */
-main {
-  display: grid;
-  grid-area: main; }
-
-/* estilos main index */
 .index-grid {
   grid-template-columns: 1fr;
   grid-template-rows: 100vh 1fr;
@@ -216,7 +190,36 @@ a {
 #circulos p {
   text-transform: uppercase; }
 
-/* estilos main page servicios */
+@media only screen and (max-width: 1024px) {
+  #paseos, #pensionados, #traslados {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "serviciosImg" "serviciosTexto";
+    justify-content: center;
+    justify-items: center;
+    align-items: flex-start; }
+  .paseos__img, .pensionados__img, .traslados__img {
+    grid-area: serviciosImg; }
+  .paseos__texto, .pensionados__texto, .traslados__texto {
+    grid-area: serviciosTexto;
+    margin-top: 0;
+    margin-bottom: 0; }
+  #circulos {
+    margin-top: .5em; }
+  .circulos__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "circ1"  "circ2"  "circ3";
+    row-gap: 1em; } }
+
+@media only screen and (max-width: 500px) {
+  .circulos__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "circ1"  "circ2"  "circ3";
+    row-gap: 1em; } }
+
 main#servicios {
   display: grid;
   grid-template-columns: 1fr;
@@ -267,7 +270,6 @@ section[id] {
   width: 50vw;
   color: white; }
 
-/* estilos main page manada */
 #manada {
   color: white;
   text-align: center;
@@ -335,7 +337,6 @@ section[id] {
   display: flex;
   align-items: center; }
 
-/* estilos main page sobre mi */
 #sobremi {
   color: white; }
 
@@ -358,7 +359,20 @@ section[id] {
   border-radius: 5%;
   border: 10px solid #666; }
 
-/* estilos main contacto */
+@media only screen and (max-width: 1024px) {
+  #sobremi section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sobreMiImg"  "sobreMiTexto";
+    align-items: flex-start; } }
+
+@media only screen and (max-width: 500px) {
+  #sobremi section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sobreMiImg"  "sobreMiTexto";
+    align-items: flex-start; } }
+
 #contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -403,7 +417,24 @@ textarea {
   font-family: 'Poppins', sans-serif;
   padding-left: 0.5em; }
 
-/* estilos footer */
+@media only screen and (max-width: 1024px) {
+  #contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.2fr 0.5fr;
+    grid-template-areas: "redes" "map" "form";
+    justify-items: center; } }
+
+@media only screen and (max-width: 500px) {
+  #contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.2fr 0.5fr;
+    grid-template-areas: "redes" "map" "form";
+    justify-items: center; } }
+
+main {
+  display: grid;
+  grid-area: main; }
+
 footer {
   grid-area: footer;
   margin-top: 1em;
@@ -443,54 +474,16 @@ footer {
   text-align: center;
   margin-top: 0.7em; }
 
-@media only screen and (max-width: 1024px) {
-  header {
-    position: unset; }
-  #paseos, #pensionados, #traslados {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "serviciosImg" "serviciosTexto";
-    justify-content: center;
-    justify-items: center;
-    align-items: flex-start; }
-  .paseos__img, .pensionados__img, .traslados__img {
-    grid-area: serviciosImg; }
-  .paseos__texto, .pensionados__texto, .traslados__texto {
-    grid-area: serviciosTexto;
-    margin-top: 0;
-    margin-bottom: 0; }
-  #circulos {
-    margin-top: .5em; }
-  .circulos__container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "circ1"  "circ2"  "circ3";
-    row-gap: 1em; }
-  #sobremi section {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "sobreMiImg"  "sobreMiTexto";
-    align-items: flex-start; }
-  #contacto {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.2fr 0.5fr;
-    grid-template-areas: "redes" "map" "form";
-    justify-items: center; } }
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; }
 
-@media only screen and (max-width: 500px) {
-  .circulos__container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "circ1"  "circ2"  "circ3";
-    row-gap: 1em; }
-  #sobremi section {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "sobreMiImg"  "sobreMiTexto";
-    align-items: flex-start; }
-  #contacto {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.2fr 0.5fr;
-    grid-template-areas: "redes" "map" "form";
-    justify-items: center; } }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #051527;
+  background: radial-gradient(circle, #051527 7%, #01426f 67%, #0464a6 100%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 18vh;
+  grid-template-areas: "header" "main" "footer"; }
