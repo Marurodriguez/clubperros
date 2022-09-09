@@ -94,23 +94,17 @@ header {
 .carousel {
   grid-area: portada; }
 
-.carousel1 {
+.carousel1, .carousel2, .carousel3 {
   background-image: url(../images/banner.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh; }
 
 .carousel2 {
-  background-image: url(../images/banner2.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover; }
+  background-image: url(../images/banner2.jpg); }
 
 .carousel3 {
-  background-image: url(../images/banner3.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover; }
+  background-image: url(../images/banner3.jpg); }
 
 .portada__container__h1 {
   color: white;
@@ -193,20 +187,6 @@ a {
   text-transform: uppercase; }
 
 @media only screen and (max-width: 1024px) {
-  #paseos, #pensionados, #traslados {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "serviciosImg" "serviciosTexto";
-    justify-content: center;
-    justify-items: center;
-    align-items: flex-start; }
-  .paseos__img, .pensionados__img, .traslados__img {
-    grid-area: serviciosImg; }
-  .paseos__texto, .pensionados__texto, .traslados__texto {
-    grid-area: serviciosTexto;
-    margin-top: 0;
-    margin-bottom: 0; }
   #circulos {
     margin-top: .5em; }
   .circulos__container {
@@ -225,8 +205,13 @@ a {
 main#servicios {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3 1fr);
-  grid-template-areas: "paseos" "pensionados" "traslados"; }
+  grid-template-rows: 0.25fr, repeat(3 1fr);
+  grid-template-areas: "h1Servicios" "paseos" "pensionados" "traslados";
+  color: white; }
+  main#servicios h1 {
+    grid-area: h1Servicios;
+    justify-self: center;
+    margin-top: 1em; }
 
 section[id] {
   scroll-margin-top: 28vh; }
@@ -272,7 +257,6 @@ section[id] {
   width: 50vw;
   color: white; }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 1024px) {
   #paseos, #pensionados, #traslados {
     display: grid;
@@ -289,8 +273,6 @@ section[id] {
     margin-top: 0;
     margin-bottom: 0; } }
 
-=======
->>>>>>> sass
 #manada {
   color: white;
   text-align: center;
@@ -360,13 +342,17 @@ section[id] {
 
 #sobremi {
   color: white; }
+  #sobremi h1 {
+    justify-self: center;
+    margin-top: 1em; }
 
 #sobremi section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "sobreMiImg sobreMiTexto";
-  align-items: center; }
+  align-items: center;
+  place-items: center; }
 
 .sobremi__img {
   grid-area: sobreMiImg; }
@@ -397,12 +383,14 @@ section[id] {
 #contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
-  grid-template-areas: "redes form" "map form";
+  grid-template-rows: 0.25fr 0.5fr 1fr;
+  grid-template-areas: "h1Contacto h1Contacto" "redes form" "map form";
   grid-row-gap: 1em;
   grid-column-gap: 1em;
   color: white;
   place-items: center; }
+  #contacto h1 {
+    grid-area: h1Contacto; }
 
 #contacto__form {
   text-align: center;
@@ -441,8 +429,8 @@ textarea {
 @media only screen and (max-width: 1024px) {
   #contacto {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.2fr 0.5fr;
-    grid-template-areas: "redes" "map" "form";
+    grid-template-rows: 0.25fr 0.25fr 0.2fr 0.5fr;
+    grid-template-areas: "h1Contacto" "redes" "map" "form";
     justify-items: center; } }
 
 @media only screen and (max-width: 500px) {
@@ -500,18 +488,11 @@ footer {
 * {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-=======
   box-sizing: border-box;
->>>>>>> sass
   scroll-behavior: smooth; }
 
 body {
   font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
-  background: #051527;
-=======
->>>>>>> sass
   background: radial-gradient(circle, #051527 7%, #01426f 67%, #0464a6 100%);
   display: grid;
   grid-template-columns: 1fr;

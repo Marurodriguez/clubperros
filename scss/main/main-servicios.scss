@@ -3,10 +3,17 @@
 main#servicios{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3 1fr);
-    grid-template-areas: "paseos"
+    grid-template-rows: 0.25fr, repeat(3 1fr);
+    grid-template-areas: "h1Servicios"
+                        "paseos"
                         "pensionados"
                         "traslados";
+    color: white;
+    h1{
+        grid-area: h1Servicios;
+        justify-self: center;
+        margin-top: 1em;
+    }
 }
 
 section[id]{

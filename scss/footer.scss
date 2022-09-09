@@ -11,7 +11,7 @@ footer{
 }
 
 .footerUno{
-    background-color: rgba(255, 255, 255, 0.445);
+    background-color: map-get($colores, footerUno);
     grid-area: footerUno;
     @include sizes(100%, 7em);
     opacity: 80%;
@@ -34,7 +34,7 @@ footer{
 
 
 .footerDos{
-    background-color: rgba(255, 255, 255, 0.445);
+    background-color: map-get($colores, footerUno);
     grid-area: footerDos;
     @include sizes(100%, 2em);
 }

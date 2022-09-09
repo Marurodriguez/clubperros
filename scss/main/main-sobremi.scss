@@ -1,8 +1,9 @@
-
-
 #sobremi{
     color: white;
-
+    h1{
+        justify-self: center;
+        margin-top: 1em;
+    }
 }
 
 #sobremi section{
@@ -11,6 +12,7 @@
     grid-template-rows: 1fr;
     grid-template-areas: "sobreMiImg sobreMiTexto";
     align-items: center;
+    place-items: center;
 
 }
 

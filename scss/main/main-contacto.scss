@@ -2,13 +2,18 @@
 #contacto{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    grid-template-areas: "redes form"
+    grid-template-rows: 0.25fr 0.5fr 1fr;
+    grid-template-areas: "h1Contacto h1Contacto"
+                         "redes form"
                          "map form";
     grid-row-gap: 1em;
     grid-column-gap: 1em;
     color: white;
     place-items: center;
+
+    h1{
+        grid-area: h1Contacto;
+    }
 }
 
 #contacto__form{
@@ -58,8 +63,9 @@ textarea{
 
     #contacto{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 0.2fr 0.5fr;
-        grid-template-areas: "redes"
+        grid-template-rows: 0.25fr 0.25fr 0.2fr 0.5fr;
+        grid-template-areas: "h1Contacto"
+                             "redes"
                              "map"
                              "form";
         justify-items: center;
