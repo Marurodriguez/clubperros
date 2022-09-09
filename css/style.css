@@ -134,6 +134,7 @@ a {
 
 #circulos {
   height: auto;
+  width: 100%;
   margin-top: 2em;
   margin-bottom: 2em;
   display: grid;
@@ -151,6 +152,7 @@ a {
 .circulos__container {
   grid-area: circulos__container;
   height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -160,8 +162,8 @@ a {
   align-items: center; }
 
 .circulos {
-  width: 14em;
   height: 14em;
+  width: 14em;
   border-radius: 50%;
   background: #c9c764;
   background-image: url(../images/huella.png);
@@ -270,6 +272,7 @@ section[id] {
   width: 50vw;
   color: white; }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 1024px) {
   #paseos, #pensionados, #traslados {
     display: grid;
@@ -286,6 +289,8 @@ section[id] {
     margin-top: 0;
     margin-bottom: 0; } }
 
+=======
+>>>>>>> sass
 #manada {
   color: white;
   text-align: center;
@@ -464,6 +469,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.445);
   grid-area: footerUno;
   height: 7em;
+  width: 100%;
   opacity: 80%;
   display: grid; }
 
@@ -481,7 +487,8 @@ footer {
 .footerDos {
   background-color: rgba(255, 255, 255, 0.445);
   grid-area: footerDos;
-  height: 2em; }
+  height: 2em;
+  width: 100%; }
 
 .footerDos__copy {
   font-size: 0.6rem;
@@ -493,11 +500,18 @@ footer {
 * {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+=======
+  box-sizing: border-box;
+>>>>>>> sass
   scroll-behavior: smooth; }
 
 body {
   font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
   background: #051527;
+=======
+>>>>>>> sass
   background: radial-gradient(circle, #051527 7%, #01426f 67%, #0464a6 100%);
   display: grid;
   grid-template-columns: 1fr;

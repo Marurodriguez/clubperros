@@ -13,7 +13,7 @@ footer{
 .footerUno{
     background-color: rgba(255, 255, 255, 0.445);
     grid-area: footerUno;
-    height: 7em;
+    @include sizes(100%, 7em);
     opacity: 80%;
     display: grid;
 }
@@ -36,7 +36,7 @@ footer{
 .footerDos{
     background-color: rgba(255, 255, 255, 0.445);
     grid-area: footerDos;
-    height: 2em;
+    @include sizes(100%, 2em);
 }
 
 .footerDos__copy{
