@@ -41,17 +41,13 @@
 }
 
 .carousel2{
+    @extend .carousel1;
     background-image: url(../images/banner2.jpg);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
 }
 
 .carousel3{
+    @extend .carousel1;
     background-image: url(../images/banner3.jpg);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
 }
 
 .portada__container__h1{
@@ -80,7 +76,7 @@ a{
 
 
 #circulos{
-    height: auto;
+    @include sizes(100%, auto);
     margin-top: 2em;
     margin-bottom: 2em;
     display: grid;
@@ -100,7 +96,7 @@ a{
 
 .circulos__container{
     grid-area: circulos__container;
-    height: 100%;
+    @include sizes(100% , 100%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -111,10 +107,9 @@ a{
 }
 
 .circulos {
-    width: 14em;
-    height: 14em;
+    @include sizes(14em , 14em);
     border-radius: 50%;
-    background: #c9c764;
+    background: map-get($colores, circulos);
     background-image: url(../images/huella.png);
     background-size: 80%;
     background-position: center;
@@ -152,27 +147,7 @@ a{
 @media only screen and (max-width: 1024px){
 
 
-    #paseos, #pensionados, #traslados{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "serviciosImg"
-                             "serviciosTexto";
-        justify-content: center;
-        justify-items: center;
-        align-items:flex-start;
-    }
-    
-    .paseos__img, .pensionados__img, .traslados__img{
-        grid-area: serviciosImg;
-    }
-    
-    .paseos__texto, .pensionados__texto, .traslados__texto{
-        grid-area: serviciosTexto;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-        
+
     #circulos{
         margin-top: .5em; 
     }

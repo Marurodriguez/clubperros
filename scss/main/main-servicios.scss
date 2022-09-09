@@ -63,3 +63,28 @@ section[id]{
     width: 50vw;
     color: white;
 }
+
+
+@media only screen and (max-width: 1024px){
+    #paseos, #pensionados, #traslados{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "serviciosImg"
+                            "serviciosTexto";
+        justify-content: center;
+        justify-items: center;
+        align-items:flex-start;
+    }
+
+    .paseos__img, .pensionados__img, .traslados__img{
+        grid-area: serviciosImg;
+    }
+
+    .paseos__texto, .pensionados__texto, .traslados__texto{
+        grid-area: serviciosTexto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
