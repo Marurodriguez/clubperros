@@ -11,13 +11,13 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "sobreMiImg sobreMiTexto";
-    align-items: center;
     place-items: center;
-
 }
 
 .sobremi__img{
     grid-area: sobreMiImg;
+    display: flex;
+    justify-content: center;
 }
 
 .sobremi__texto{
@@ -26,10 +26,8 @@
 }
 
 #sobremi img{
-    margin: 2em;
     border-radius: 5%;
     border:10px solid #666;
-
 }
 
 @media only screen and (max-width: 1024px){
@@ -38,9 +36,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "sobreMiImg" 
-                            "sobreMiTexto";
-        align-items: flex-start;
-    
+                            "sobreMiTexto";    
     }
 }    
 
@@ -52,7 +48,6 @@
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "sobreMiImg" 
                             "sobreMiTexto";
-        align-items: flex-start;
     
     }
 }    

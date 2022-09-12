@@ -351,18 +351,18 @@ section[id] {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "sobreMiImg sobreMiTexto";
-  align-items: center;
   place-items: center; }
 
 .sobremi__img {
-  grid-area: sobreMiImg; }
+  grid-area: sobreMiImg;
+  display: flex;
+  justify-content: center; }
 
 .sobremi__texto {
   grid-area: sobreMiTexto;
   padding: 1em; }
 
 #sobremi img {
-  margin: 2em;
   border-radius: 5%;
   border: 10px solid #666; }
 
@@ -370,15 +370,13 @@ section[id] {
   #sobremi section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "sobreMiImg"  "sobreMiTexto";
-    align-items: flex-start; } }
+    grid-template-areas: "sobreMiImg"  "sobreMiTexto"; } }
 
 @media only screen and (max-width: 500px) {
   #sobremi section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "sobreMiImg"  "sobreMiTexto";
-    align-items: flex-start; } }
+    grid-template-areas: "sobreMiImg"  "sobreMiTexto"; } }
 
 #contacto {
   display: grid;
@@ -406,7 +404,8 @@ section[id] {
   color: lightgray; }
 
 #contacto__map {
-  grid-area: map; }
+  grid-area: map;
+  margin-top: 1em; }
 
 label {
   display: block;
@@ -438,11 +437,6 @@ textarea {
     grid-template-columns: 1fr;
     grid-template-rows: 0.25fr 0.25fr 0.2fr 0.5fr;
     grid-template-areas: "h1Contacto" "redes" "map" "form";
-    justify-items: center; }
-  #contacto {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.2fr 0.5fr;
-    grid-template-areas: "redes" "map" "form";
     justify-items: center; } }
 
 main {
@@ -498,5 +492,5 @@ body {
   background: radial-gradient(circle, #051527 7%, #01426f 67%, #0464a6 100%);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 18vh;
+  grid-template-rows: auto auto auto;
   grid-template-areas: "header" "main" "footer"; }

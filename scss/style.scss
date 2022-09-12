@@ -14,7 +14,7 @@ body{
     background: map-get($colores, fondo);    
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 18vh;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "header"
                         "main"
                         "footer";
