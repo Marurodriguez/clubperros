@@ -2,49 +2,44 @@
 footer{
     grid-area: footer;
     margin-top: 1em;
+    @include sizes(100%, 10em);
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: "footerUno"
                         "footerDos";
     align-items: center;
+    background-color: map-get($colores, footerUno);
+    color: white;
 }
 
 .footerUno{
-    background-color: map-get($colores, footerUno);
     grid-area: footerUno;
-    @include sizes(100%, 7em);
+    @include sizes(100%, 10em);
     opacity: 80%;
     display: grid;
+    place-items: center;
+    text-align: center;
 }
 
 .footerUno__texto{
     font-size: 1rem;
-    color: white;
-    justify-self: center;
     text-shadow: 2px 2px 5px black;
 }
 
 
-.footerUno__instagram{
-    margin-right: 2%;
-    align-self:flex-end;
-    justify-self: end;
-}
-
 
 .footerDos{
-    background-color: map-get($colores, footerUno);
+    background-color: map-get($colores, footerDos);
     grid-area: footerDos;
     @include sizes(100%, 2em);
+    text-align: center;
 }
 
 .footerDos__copy{
     font-size: 0.6rem;
-    margin-right: 1em;
     color: white;
-    text-align: center;
-    margin-top: 0.7em;
+    margin-top: 0,1em;
 }
 
 
