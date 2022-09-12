@@ -73,7 +73,15 @@ textarea{
 }
 
 @media only screen and (max-width: 500px){
-
+    #contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.25fr 0.2fr 0.5fr;
+        grid-template-areas: "h1Contacto"
+                             "redes"
+                             "map"
+                             "form";
+        justify-items: center;
+    }
 
 
     #contacto{
