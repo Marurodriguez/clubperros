@@ -337,7 +337,8 @@ section[id] {
   color: #03243a;
   visibility: hidden;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 #sobremi {
   color: white; }
@@ -359,7 +360,8 @@ section[id] {
 
 .sobremi__texto {
   grid-area: sobreMiTexto;
-  padding: 1em; }
+  padding: 1em;
+  text-align: center; }
 
 #sobremi img {
   border-radius: 5%;
@@ -454,6 +456,8 @@ footer {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.445);
   color: white; }
+  footer a {
+    z-index: 1000; }
 
 .footerUno {
   grid-area: footerUno;

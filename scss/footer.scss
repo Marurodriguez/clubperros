@@ -11,6 +11,9 @@ footer{
     align-items: center;
     background-color: map-get($colores, footerUno);
     color: white;
+    a{
+        z-index: 1000;
+    }
 }
 
 .footerUno{
