@@ -42,6 +42,10 @@ header {
   top: 0;
   z-index: 1;
   transition: transform 1s; }
+  header .bg-white {
+    background-color: white; }
+  header .logo:hover {
+    transform: scale(0.9); }
   header nav ul li {
     transition: transform 0.5s;
     font-size: calc(0.6rem + .2vw); }
@@ -53,15 +57,6 @@ header {
     header nav ul li a:hover {
       color: #01395c !important;
       cursor: pointer; }
-
-.bg-white {
-  background-color: white; }
-
-.sombreado {
-  box-shadow: 1em 1em 1em 1em rgba(0, 0, 0, 0.5); }
-
-.logo:hover {
-  transform: scale(0.9); }
 
 @media only screen and (max-width: 1024px) {
   header {
@@ -390,41 +385,33 @@ section[id] {
   place-items: center; }
   #contacto h1 {
     grid-area: h1Contacto; }
-
-#contacto__form {
-  text-align: center;
-  align-self: center;
-  justify-self: center;
-  grid-area: form;
-  margin: 1em; }
-
-#contacto__redes {
-  grid-area: redes; }
-
-#contacto__redes a {
-  color: lightgray; }
-
-#contacto__map {
-  grid-area: map;
-  margin-top: 1em; }
-
-label {
-  display: block;
-  margin-top: 1em; }
-
-#submit {
-  padding: 0.5em;
-  margin: 1em;
-  font-family: 'Poppins', sans-serif; }
-
-textarea {
-  font-family: 'Poppins', sans-serif;
-  margin: 2em;
-  padding: 1em; }
-
-#nombre, #email, #contacto {
-  font-family: 'Poppins', sans-serif;
-  padding-left: 0.5em; }
+  #contacto #contacto__form {
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    grid-area: form;
+    margin: 1em; }
+    #contacto #contacto__form label {
+      display: block;
+      margin-top: 1em; }
+    #contacto #contacto__form #submit {
+      padding: 0.5em;
+      margin: 1em;
+      font-family: 'Poppins', sans-serif; }
+    #contacto #contacto__form textarea {
+      font-family: 'Poppins', sans-serif;
+      margin: 2em;
+      padding: 1em; }
+    #contacto #contacto__form #nombre, #contacto #contacto__form #email, #contacto #contacto__form #contacto {
+      font-family: 'Poppins', sans-serif;
+      padding-left: 0.5em; }
+  #contacto #contacto__redes {
+    grid-area: redes; }
+    #contacto #contacto__redes a {
+      color: lightgray; }
+  #contacto #contacto__map {
+    grid-area: map;
+    margin-top: 1em; }
 
 @media only screen and (max-width: 1024px) {
   #contacto {
@@ -458,31 +445,27 @@ footer {
   color: white; }
   footer a {
     z-index: 1000; }
-
-.footerUno {
-  grid-area: footerUno;
-  height: 10em;
-  width: 100%;
-  opacity: 80%;
-  display: grid;
-  place-items: center;
-  text-align: center; }
-
-.footerUno__texto {
-  font-size: 1rem;
-  text-shadow: 2px 2px 5px black; }
-
-.footerDos {
-  background-color: rgba(255, 255, 255, 0.445);
-  grid-area: footerDos;
-  height: 2em;
-  width: 100%;
-  text-align: center; }
-
-.footerDos__copy {
-  font-size: 0.6rem;
-  color: white;
-  margin-top: 0,1em; }
+  footer .footerUno {
+    grid-area: footerUno;
+    height: 10em;
+    width: 100%;
+    opacity: 80%;
+    display: grid;
+    place-items: center;
+    text-align: center; }
+    footer .footerUno .footerUno__texto {
+      font-size: 1rem;
+      text-shadow: 2px 2px 5px black; }
+  footer .footerDos {
+    background-color: rgba(255, 255, 255, 0.445);
+    grid-area: footerDos;
+    height: 2em;
+    width: 100%;
+    text-align: center; }
+    footer .footerDos .footerDos__copy {
+      font-size: 0.6rem;
+      color: white;
+      margin-top: 0,1em; }
 
 * {
   margin: 0;
@@ -497,3 +480,6 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: "header" "main" "footer"; }
+
+.sombreado {
+  box-shadow: 1em 1em 1em 1em rgba(0, 0, 0, 0.5); }
